@@ -14,9 +14,9 @@ namespace NetFlix.Controllers
             return View();
         }
 
-        public ActionResult Welcome()
+        public ActionResult Welcome(string name, int ID = 1)
         {
-            return Content("This is a Welcome Action............");
+            return Content("Welcome " + name + " Number Of times = " + ID);
         }
     }
 }
