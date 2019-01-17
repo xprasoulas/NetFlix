@@ -23,6 +23,12 @@
                 <ul class="nav navbar-nav">                   
                     <li>@Html.ActionLink("About", "About", "Home")</li>
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    <li>
+                        @Html.ActionLink(linkText: "WelcomeMessage",
+                                       actionName:"Welcome", controllerName: "HelloNetflix",
+                                       routeValues: new { name = "Peri", ID = 7},
+                                       htmlAttributes: null)
+                    </li>
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>
