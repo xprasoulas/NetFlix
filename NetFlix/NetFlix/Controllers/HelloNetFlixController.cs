@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 
 namespace NetFlix.Controllers
 {
@@ -16,7 +12,9 @@ namespace NetFlix.Controllers
 
         public ActionResult Welcome(string name, int ID = 1)
         {
-            return Content("Welcome " + name + " Number Of times = " + ID);
+            ViewBag.Message = "This is my name " + name;
+            ViewBag.Number = ID;
+            return View();
         }
     }
 }
