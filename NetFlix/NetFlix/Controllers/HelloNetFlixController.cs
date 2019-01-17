@@ -13,5 +13,10 @@ namespace NetFlix.Controllers
         {
             return View();
         }
+
+        public ActionResult Welcome()
+        {
+            return Content("This is a Welcome Action............");
+        }
     }
 }
