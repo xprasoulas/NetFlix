@@ -8,6 +8,6 @@ namespace NetFlix.Models
 {
     public class NetFlixDbContext : DbContext   
     {
-        public DbSet<Serie> Series { get; set; } //DbSet is a collection 
+        public DbSet<Serie> Series { get; set; } //DbSet is a collection Series = name of table
     }
 }
