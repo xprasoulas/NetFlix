@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using NetFlix.Models;
+using System;
 using System.Data;
 using System.Data.Entity;
 using System.Linq;
 using System.Net;
-using System.Web;
 using System.Web.Mvc;
-using NetFlix.Models;
 
 namespace NetFlix.Controllers
 {
@@ -15,9 +13,20 @@ namespace NetFlix.Controllers
         private NetFlixDbContext db = new NetFlixDbContext();
 
         // GET: Series
-        public ActionResult Index()
+        public ActionResult Index(string searchString)
         {
-            return View(db.Series.ToList());
+            //bring movies from dbContext
+            var series = from s in db.Series
+                         select s;
+            //check if searchString already exists
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                // Limit Series based on searchString
+                series = series.Where(s => s.Title.Contains(searchString));
+            }
+           
+            //return new list of series
+            return View(series);
         }
 
         // GET: Series/Details/5
