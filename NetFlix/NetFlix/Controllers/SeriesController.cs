@@ -13,9 +13,14 @@ namespace NetFlix.Controllers
         private NetFlixDbContext db = new NetFlixDbContext();
 
         // GET: Series
-        public ActionResult Index(string searchString)
+        public ActionResult Index(string searchString, string serieGenre)
         {
+            //bring serieGenre from db
+            //distinc ony genre
+            //Pass the genre list to a SelectList for the View using ViewBag
             //bring movies from dbContext
+
+
             var series = from s in db.Series
                          select s;
             //check if searchString already exists
