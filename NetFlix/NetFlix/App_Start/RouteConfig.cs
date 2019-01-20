@@ -9,6 +9,15 @@ namespace NetFlix
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
+
+            //convension routing
+            routes.MapRoute(
+                name: "HelloNetflixByReleaseDate",
+                url: "HelloNetflix/released/{year}/{month}",
+                defaults: new { controller = "HelloNetFlix", action = "ByReleaseDate" },
+                constraints: new { year = @"2015|2016", month = @"\d{2}" }
+                );
+
             routes.MapRoute(
                 name: "Hello",
                 url: "{controller}/{action}/{name}/{id}"
