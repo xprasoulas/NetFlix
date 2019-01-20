@@ -1,5 +1,6 @@
 ﻿using NetFlix.Models;
 using System;
+using System.Collections.Generic;//
 using System.Data;
 using System.Data.Entity;
 using System.Linq;
@@ -15,12 +16,13 @@ namespace NetFlix.Controllers
         // GET: Series
         public ActionResult Index(string searchString, string serieGenre)
         {
+            var GenreList = new List<string>();
             //bring serieGenre from db
             var genres = from g in db.Series
                          orderby g.Genre
                          select g.Genre;
             //distinc only Genres
-
+            GenreList.AddRange(genres.Distinct());
             //Pass the genre list to a SelectList for the View using ViewBag
             //bring movies from dbContext
 
