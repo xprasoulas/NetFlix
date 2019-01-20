@@ -24,6 +24,8 @@ namespace NetFlix.Controllers
             //distinc only Genres
             GenreList.AddRange(genres.Distinct());
             //Pass the genre list to a SelectList for the View using ViewBag
+            ViewBag.serieGenre = new SelectList(GenreList);
+
             //bring movies from dbContext
 
 
