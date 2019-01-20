@@ -16,7 +16,11 @@ namespace NetFlix.Controllers
         public ActionResult Index(string searchString, string serieGenre)
         {
             //bring serieGenre from db
-            //distinc ony genre
+            var genres = from g in db.Series
+                         orderby g.Genre
+                         select g.Genre;
+            //distinc only Genres
+
             //Pass the genre list to a SelectList for the View using ViewBag
             //bring movies from dbContext
 
@@ -29,7 +33,11 @@ namespace NetFlix.Controllers
                 // Limit Series based on searchString
                 series = series.Where(s => s.Title.Contains(searchString));
             }
-           
+            if (!String.IsNullOrEmpty(serieGenre))
+            {
+                // Limit Series based on serieGenre
+                series = series.Where(s => s.Title.Contains(serieGenre));
+            }
             //return new list of series
             return View(series);
         }
