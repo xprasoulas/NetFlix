@@ -10,7 +10,7 @@
 <p>
     @Html.ActionLink("Create New", "Create")
 
-    @using (Html.BeginForm())
+    @using (Html.BeginForm("Index", "Series", FormMethod.Get))
     {
     <div>
             Genre : @Html.DropDownList("serieGenre", "All")
