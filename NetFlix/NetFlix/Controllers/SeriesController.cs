@@ -40,7 +40,7 @@ namespace NetFlix.Controllers
             if (!String.IsNullOrEmpty(serieGenre))
             {
                 // Limit Series based on serieGenre
-                series = series.Where(s => s.Title.Contains(serieGenre));
+                series = series.Where(s => s.Genre == serieGenre);
             }
             //return new list of series
             return View(series);
