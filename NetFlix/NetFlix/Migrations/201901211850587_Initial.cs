@@ -5,7 +5,7 @@ namespace NetFlix.Migrations
     
     public partial class Initial : DbMigration
     {
-        public override void Up()
+        public override void Up() //Method to create the table
         {
             CreateTable(
                 "dbo.Series",
