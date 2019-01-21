@@ -15,5 +15,6 @@ namespace NetFlix.Models
         public string Genre { get; set; }
         public int Seasons { get; set; }
         public string Rating { get; set; }
+        public int Price { get; set; }
     }
 }
