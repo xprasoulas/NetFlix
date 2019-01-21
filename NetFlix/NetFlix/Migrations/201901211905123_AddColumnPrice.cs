@@ -14,5 +14,6 @@ namespace NetFlix.Migrations
         {
             DropColumn("dbo.Series", "Price");
         }
+
     }
 }
