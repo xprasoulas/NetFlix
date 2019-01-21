@@ -185,6 +185,10 @@
     <Compile Include="Migrations\201901211850587_Initial.Designer.cs">
       <DependentUpon>201901211850587_Initial.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201901211905123_AddColumnPrice.cs" />
+    <Compile Include="Migrations\201901211905123_AddColumnPrice.Designer.cs">
+      <DependentUpon>201901211905123_AddColumnPrice.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -277,6 +281,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201901211850587_Initial.resx">
       <DependentUpon>201901211850587_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901211905123_AddColumnPrice.resx">
+      <DependentUpon>201901211905123_AddColumnPrice.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
