@@ -72,7 +72,7 @@ namespace NetFlix.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID,Title,RealeseData,Genre,Seasons,Rating")] Serie serie)
+        public ActionResult Create([Bind(Include = "ID,Title,RealeseData,Genre,Seasons,Rating,Price")] Serie serie)
         {
             if (ModelState.IsValid)
             {
@@ -104,7 +104,7 @@ namespace NetFlix.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ID,Title,RealeseData,Genre,Seasons,Rating")] Serie serie)
+        public ActionResult Edit([Bind(Include = "ID,Title,RealeseData,Genre,Seasons,Rating,Price")] Serie serie)
         {
             if (ModelState.IsValid)
             {
